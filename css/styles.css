@@ -1,0 +1,740 @@
+/* Reset y estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    overflow-x: hidden; /* Prevenir scroll horizontal */
+}
+
+.playfair {
+    font-family: 'Playfair Display', serif;
+}
+
+
+.bg-light {
+    --bs-bg-opacity: 1;
+    background-color:  transparent !important;
+  }
+
+/* Navbar */
+.navbar {
+    background-color: #000;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 25px;
+    width: auto;
+}
+
+.navbar-menu {
+    display: flex;
+    gap: 32px;
+}
+
+.navbar-menu a {
+    color: #1eca43;
+    text-decoration: none;
+    padding: 8px 12px;
+    transition: color 0.3s ease;
+}
+
+.navbar-menu a:hover {
+    color: #ccc;
+}
+
+.navbar-languages {
+    display: flex;
+    gap: 16px;
+}
+
+.navbar-languages a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navbar-languages a:hover {
+    color: #ccc;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: #fff;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding-top: 80px;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.hero-content {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.hero-text {
+    max-width: 600px;
+    color: #fff;
+}
+
+.hero-title {
+    font-size: 64px;
+    font-weight: bold;
+    margin-bottom: 24px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 24px;
+}
+
+.button {
+    padding: 12px 24px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.button-primary {
+    background-color: #fff;
+    color: #000;
+}
+
+.button-primary:hover {
+    background-color: #f0f0f0;
+}
+
+.button-secondary {
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.button-secondary:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/* Espacios Section */
+.espacios {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.section-description {
+    font-size: 18px;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 48px;
+}
+
+.espacios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+}
+
+.espacio-card {
+    position: relative;
+    overflow: hidden;
+    height: 320px;
+}
+
+.espacio-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.espacio-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.espacio-card:hover .espacio-image {
+    transform: scale(1.1);
+}
+
+.espacio-card:hover .espacio-overlay {
+    opacity: 1;
+}
+
+.espacio-content {
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.espacio-title {
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+/* Carta Section */
+.carta {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+    width: 100%;
+    clear: both;
+}
+
+.carta-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.carta-pdf {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    overflow: hidden;
+    min-height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    position: relative;
+}
+
+#flipbook {
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 800px;
+    height: 600px;
+    overflow: hidden;
+}
+
+#flipbook .pages {
+    position: relative;
+    display: flex;
+    width: 400%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+#flipbook .page {
+    flex-shrink: 0;
+    width: 25%;
+    height: 100%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+#flipbook .page img {
+    max-width: 100%;
+    height: 100%;
+    object-fit: contain;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: block;
+}
+
+.pdf-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background: #f5f5f5;
+    border-radius: 4px;
+}
+
+.pdf-button {
+    padding: 8px 16px;
+    background: #1a1a1a;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.pdf-button:hover {
+    background: #333;
+}
+
+#pdf-render {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.carta-buttons {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.carta-buttons .button {
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.button-primary {
+    background-color: #1a1a1a;
+    color: white;
+}
+
+.button-primary:hover {
+    background-color: #333;
+    transform: translateY(-2px);
+}
+
+.nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 100;
+}
+
+.nav-arrow:hover {
+    background: rgba(0, 0, 0, 0.9);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.prev-arrow {
+    left: 20px;
+}
+
+.next-arrow {
+    right: 20px;
+}
+
+/* Contacto Section */
+.contacto {
+    padding: 80px 0;
+    background-color: #fff;
+    width: 100%;
+    clear: both;
+}
+
+.contacto-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contacto-info h3 {
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+
+.horario-item {
+    margin-bottom: 12px;
+}
+
+.mapa {
+    height: 400px;
+    background-color: #eee;
+    border-radius: 8px;
+}
+
+/* Footer */
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 40px 0;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.social-links a {
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #ccc;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ccc;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .navbar-menu {
+        position: fixed;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: #000;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+    }
+
+    .navbar-menu.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .navbar-menu a {
+        padding: 15px 20px;
+        width: 100%;
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+    }
+
+    .navbar-logo {
+        display: none;
+    }
+    
+    .hero-title {
+        font-size: 48px;
+    }
+    
+    .contacto-grid {
+        flex-direction: column;
+    }
+    
+    .footer-links {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    /* Ajustes generales para móvil */
+    .section-container {
+        padding: 0;
+    }
+
+    .carta-container {
+        padding: 0;
+    }
+
+    .carta-pdf {
+        min-height: auto;
+        border-radius: 0;
+        margin: 0;
+    }
+
+    #flipbook {
+        height: auto;
+        border-radius: 0;
+        margin: 0;
+    }
+
+    .nav-arrow {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+    }
+
+    .prev-arrow {
+        left: 10px;
+    }
+
+    .next-arrow {
+        right: 10px;
+    }
+
+    /* Ajustes de espaciado */
+    
+    .hero {
+        padding-top: 60px;
+    }
+
+    .hero-content {
+        padding: 0 15px;
+    }
+
+    .section-title {
+        font-size: 32px;
+        margin-bottom: 24px;
+        padding: 0 15px;
+    }
+
+    .section-description {
+        font-size: 16px;
+        margin-bottom: 32px;
+        padding: 0 15px;
+    }
+
+    .espacios-grid {
+        padding: 0 15px;
+    }
+
+    .contacto-info {
+        padding: 0 15px;
+    }
+
+    .mapa {
+        border-radius: 0;
+    }
+
+    /* Ajustes de botones */
+    .carta-buttons {
+        padding: 0 15px;
+    }
+
+    .button {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Ajustes del footer */
+    .footer-container {
+        padding: 0 15px;
+    }
+
+    /* Ajustes de la navbar */
+    .navbar-container {
+        padding: 0 15px;
+    }
+}
+
+/* Gemini Section */
+.gemini {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+    width: 100%;
+    clear: both;
+}
+
+.gemini-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.chat-container {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.chat-messages {
+    height: 400px;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+.message {
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    border-radius: 15px;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+.user-message {
+    background-color: #007bff;
+    color: white;
+    margin-left: auto;
+}
+
+.bot-message {
+    background-color: #f1f1f1;
+    color: #333;
+    margin-right: auto;
+}
+
+.chat-input {
+    display: flex;
+    padding: 15px;
+    background: #f8f9fa;
+    border-top: 1px solid #dee2e6;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.chat-input button {
+    padding: 10px 20px;
+}
+
+/* Loading Indicator */
+.loading-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    gap: 10px;
+}
+
+.spinner {
+    width: 20px;
+    height: 20px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #007bff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loading-indicator span {
+    color: #666;
+    font-size: 14px;
+}
+
+/* Error Message */
+.error-message {
+    background-color: #ffebee;
+    color: #c62828;
+    padding: 10px 15px;
+    border-radius: 15px;
+    margin: 10px 0;
+    max-width: 80%;
+    word-wrap: break-word;
+    border: 1px solid #ffcdd2;
+} 
