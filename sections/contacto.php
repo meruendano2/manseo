@@ -80,7 +80,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                         <form method="post" class="needs-validation" novalidate>
                             <!-- Nombre -->
-                            <div class="mb-3">
+                            <div class="mb-1">
                                 <label for="nombre" class="form-label">*Nombre</label>
                                 <input type="text" class="form-control <?= isset($errors['nombre']) ? 'is-invalid' : '' ?>" 
                                     id="nombre" name="nombre" maxlength="50"
