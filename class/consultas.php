@@ -1,4 +1,3 @@
-	
 <?php
 //require_once("cfg/conexion.php");
 //equire_once("class/resize.php");
@@ -51,7 +50,7 @@ public function agregarHistorial($accion,$tabla,$registro){// para s
 
 public function getMenu($cat){
       //  $consulta = "SELECT *  FROM  tumenu WHERE categoria='".$cat."'  ORDER BY `tumenu`.`nombre` "  ;
-           $consulta = "SELECT *  FROM  tumenu WHERE categoria='".$cat."'  "  ;
+           $consulta = "SELECT *  FROM  tumenu  WHERE  categoria='".$cat."'  "  ;
         $valores = null;
  
         $oConectar = new conectorDB; //instanciamos conector
@@ -59,14 +58,15 @@ public function getMenu($cat){
          return $this->resultado;
     } //Termina funcion 
 
+ 
 
 public function enviarMailMenu($tipo,$valores){
 	 $mensaje = 'mensaje No';
-    if ($tipo=="menu" ){ 
+    if ($tipo=="configuramenu" ){ 
 			$asunto="Presupuesto grupos Restaurante ManSeo";
 			$de="Restaurante ManSeo";
-			$mailfrom="info@manseo.es";
-            $dest ="info@manseo.es"; //Email de destino
+			$mailfrom="reservas@manseo.es";
+            $dest ="reservas@manseo.es"; //Email de destino
             $nombre = $valores['nombre'];
             $mail = $valores['mail'];
 			
@@ -90,9 +90,9 @@ public function enviarMailMenu($tipo,$valores){
 			$cuerpo .="<br> importe total: ".$valores['importetotal'];
 
 			$cuerpo .="\r\n <br> ";
-			$cuerpo .="<br> Nombre: ".$valores['nombre'];
-			$cuerpo .="<br> Mail: ".$valores['mail'];
-			$cuerpo .="<br> Telefono: ".$valores['telefono'];
+			$cuerpo .="<br> Nombre:cliente ".$valores['nombre'];
+			$cuerpo .="<br> Mail Cliente: ".$valores['mail'];
+			$cuerpo .="<br> Telefono cliente: ".$valores['telefono'];
 			$cuerpo .="<br>  ";
 		
 			$cuerpo .="<br> Fecha: ".$valores['fecha'];
@@ -113,7 +113,7 @@ public function enviarMailMenu($tipo,$valores){
 
 
             	 if(mail($mail,$asunto,$cuerpo,$headers)){
-                $mensaje = 'mensaje enviado';
+                $mensaje = 'mensaje enviado a ' .$dest;
 
                 $this->agregarHistorial("Reserva",$mail,$valores); // guardo historial	
                 // si el envio fue exitoso reseteamos lo que el usuario escribio:
@@ -121,24 +121,58 @@ public function enviarMailMenu($tipo,$valores){
                 $mensaje = 'mensaje NO enviado';
            		 }
             };
-   		};
+   	
+		} else {
+			 $mensaje = 'otro mail';
+
+			};
 
 
 
 
    		return $mensaje;
-    } //Termina funcion 
+} //Termina funcion 
 
 
 
+public function enviarMailPHPMailer($destinatario, $asunto, $cuerpoHtml, $nombreRemitente = 'Restaurante ManSeo', $mailRemitente = 'reservas@manseo.es') {
+    // Incluye la configuración SMTP desde config.php
+   // require __DIR__ . '/../config.php'; // Asegúrate de que las variables estén definidas en config.php
+    require_once __DIR__ . '/../vendor/autoload.php';
 
+    $mail = new \PHPMailer\PHPMailer\PHPMailer(true);
 
+    try {
+        // Configuración del servidor SMTP usando variables de config.php
+        $mail->isSMTP();
+        $mail->Host       = SMTP_HOST;
+        $mail->SMTPAuth   = true;
+        $mail->Username   = SMTP_USER;
+        $mail->Password   = SMTP_PASS;
+        $mail->SMTPSecure = PHPMailer\PHPMailer\PHPMailer::ENCRYPTION_STARTTLS;
+        $mail->Port       = SMTP_PORT;
 
+        // Remitente y destinatario
+        $mail->setFrom($mailRemitente, $nombreRemitente);
+        $mail->addAddress($destinatario);
+        $mail->CharSet = 'UTF-8';
+        $mail->Encoding = 'base64';
 
+        // Contenido
+        $mail->isHTML(true);
+        $mail->Subject = $asunto;
+        $mail->Body    = $cuerpoHtml;
 
+        $mail->send();
+        $salida = 'Correo enviado correctamente';
+    } catch (Exception $e) {
+        $salida= 'Error al enviar correo: ' . $mail->ErrorInfo;
+    }
+	 
 
-
-
+		return $salida;
+}
+ 
 
 
 

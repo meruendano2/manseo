@@ -1,24 +1,69 @@
 <!-- Footer -->
 <footer class="footer">
-    <div class="footer-container">
-        <div class="social-links">
-            <a href="#" aria-label="Facebook">
-                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M18.77,7.46H14.5v-1.9c0-.9.6-1.1,1-1.1h3V.5h-4.33C10.24.5,9.5,3.44,9.5,5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4Z"/>
-                </svg>
-            </a>
-            <a href="#" aria-label="Instagram">
-                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12,2.2c3.2,0,3.6,0,4.9.1,3.3.1,4.8,1.7,4.9,4.9.1,1.3.1,1.6.1,4.8,0,3.2,0,3.6-.1,4.8-.1,3.2-1.7,4.8-4.9,4.9-1.3.1-1.6.1-4.9.1-3.2,0-3.6,0-4.8-.1-3.3-.1-4.8-1.7-4.9-4.9-.1-1.3-.1-1.6-.1-4.8,0-3.2,0-3.6.1-4.8C2.4,4,4,2.4,7.2,2.3,8.5,2.2,8.8,2.2,12,2.2ZM12,0C8.7,0,8.3,0,7,0,3,0.1.1,3,.1,7c0,1.3,0,1.7,0,5s0,3.7,0,5C0,21,3,23.9,7,24c1.3,0,1.7,0,5,0s3.7,0,5,0c4,0,6.9-2.9,7-6.9,0-1.3,0-1.7,0-5s0-3.7,0-5C24,3,21,0.1,17,0c-1.3,0-1.7,0-5,0Z"/>
-                    <path d="M12,5.8c-3.4,0-6.2,2.8-6.2,6.2s2.8,6.2,6.2,6.2,6.2-2.8,6.2-6.2S15.4,5.8,12,5.8Zm0,10.2c-2.2,0-4-1.8-4-4s1.8-4,4-4,4,1.8,4,4-1.8,4-4,4Z"/>
-                    <circle cx="18.4" cy="5.6" r="1.4"/>
-                </svg>
-            </a>
+    <div class="footer-container d-flex flex-column flex-md-row justify-content-between align-items-center py-3" style="gap: 10px;">
+        
+        <div class="footer-links d-flex align-items-center" style="gap: 15px;">
+            <span class="fw-bold playfair " style="color:#caa65c;">Restaurante ManSeo</span>
+            <a href="#" data-bs-toggle="modal" data-bs-target="#modalPrivacidad" class="text-decoration-none" style="color:#caa65c;">Política Privacidad</a>
+            <a href="#" data-bs-toggle="modal" data-bs-target="#modalConcidiciones" class="text-decoration-none" style="color:#caa65c;">Condiciones Uso</a>
         </div>
-        <p>© MANSEO</p>
-        <div class="footer-links">
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms & Conditions</a>
+
+        <div class="social-links d-flex align-items-center">
+            <a href="<?= $facebook; ?>" target="_blank" aria-label="Facebook" style="color:#caa65c; margin-right:10px;">
+                <i class="bi bi-facebook" style="font-size: 2rem; vertical-align: middle;"></i>
+            </a>
+            <a href="<?= $instagram; ?>" target="_blank" aria-label="Instagram" style="color:#caa65c;">
+                <i class="bi bi-instagram" style="font-size: 2rem; vertical-align: middle;"></i>
+            </a>
         </div>
     </div>
-</footer> 
+</footer>
+
+<!-- Modal Política de Privacidad -->
+<div class="modal fade" id="modalPrivacidad" tabindex="-1" aria-labelledby="modalPrivacidadLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header" style="background:#caa65c; color:#fff;">
+        <h5 class="modal-title" id="modalPrivacidadLabel"><?= $politica['nombre']; ?></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body" style="color:#333;">
+        <p>
+       
+            <?= $politica['descripcion']; ?>
+        </p>
+        
+        <p>
+          Para más información, contacta con nosotros en <a href="mailto:<?= $mail_empresa; ?>"><?= $mail_empresa; ?></a>.
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal Política de modalConcidiciones -->
+<div class="modal fade" id="modalConcidiciones" tabindex="-1" aria-labelledby="modalcondicionesLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header" style="background:#caa65c; color:#fff;">
+        <h5 class="modal-title" id="modalcondicionesLabel"> <?= $condiciones['nombre']; ?></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body" style="color:#333;">
+        <p>
+       
+            <?= $condiciones['descripcion']; ?>
+        </p>
+        
+        <p>
+          Para más información, contacta con nosotros en <a href="mailto:<?= $mail_empresa; ?>"><?= $mail_empresa; ?></a>.
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,72 @@
+/* CSS Document */
+* {
+	margin:0px;
+	padding:0px;
+}
+
+      body {
+        padding-top: 2px;
+        padding-bottom: 2px;
+      }
+
+      /* Custom container */
+
+	  .content {
+	
+max-width: 2300px;
+height: 2000px;
+
+background: none repeat scroll 0 0 #F1F1F1;
+border: 1px solid #E3E3E3;
+margin: 0 auto;
+padding: 0;
+box-shadow: 2px 2px 2px #999;
+-webkit-box-shadow: 2px 2px 2px #333;
+-moz-box-shadow: 2px 2px 2px #333;
+}
+
+.container-fluid {
+	 border: 1px solid #c0c0c0;
+}
+.container {
+		width: 98% !important;; 
+}
+.content_left {
+	float: left;
+	position: relative;
+	width:90px;
+	height: 1000px;
+	padding-top: 5px;
+	padding-right: 0px;
+	padding-bottom: 5px;
+	padding-left: 0px;
+	border: thin solid #00F;
+}
+.content_right {
+	float: left;
+	width: 170px;
+	height: 1000px;
+	padding-top: 5px;
+	padding-right: 1px;
+	padding-bottom: 0px;
+	padding-left: 4px;
+	border: thin solid #00F;
+
+}
+.content_medio {
+	float: left;
+	width: 980px;
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+	border: thin solid #00F;
+}
+    
+     .input-xs {
+    height: 22px;
+    padding: 5px 5px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px;
+    }

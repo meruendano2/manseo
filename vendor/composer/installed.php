@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => '__root__',
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
-        'reference' => null,
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => '8271c94ea7b395b853d8b62c59b36ae0f3e03e91',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -11,9 +11,9 @@
     ),
     'versions' => array(
         '__root__' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
-            'reference' => null,
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => '8271c94ea7b395b853d8b62c59b36ae0f3e03e91',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -25,6 +25,15 @@
             'reference' => '2f5c94fe7493efc213f643c23b1b1c249d40f47e',
             'type' => 'library',
             'install_path' => __DIR__ . '/../phpmailer/phpmailer',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'tecnickcom/tcpdf' => array(
+            'pretty_version' => '6.10.0',
+            'version' => '6.10.0.0',
+            'reference' => 'ca5b6de294512145db96bcbc94e61696599c391d',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../tecnickcom/tcpdf',
             'aliases' => array(),
             'dev_requirement' => false,
         ),

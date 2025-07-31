@@ -12,9 +12,26 @@ body {
     overflow-x: hidden; /* Prevenir scroll horizontal */
 }
 
-.playfair {
-    font-family: 'Playfair Display', serif;
+@font-face {
+  font-family: 'Righteous';
+  src: url('fonts/Righteous-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
+@font-face {
+    font-family: 'Rage';
+    src: url('fonts/rage.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+.playfair {
+  font-family: 'Righteous';
+}
+.rage {
+    font-family: 'Rage';
+  }
+  
 
 
 .bg-light {
@@ -22,9 +39,23 @@ body {
     background-color:  transparent !important;
   }
 
+  .navbar-toggler {
+    padding: var(--bs-navbar-toggler-padding-y) var(--bs-navbar-toggler-padding-x);
+    font-size: var(--bs-navbar-toggler-font-size);
+    line-height: 1;
+    color: rgba(246, 248, 245, 0.65);
+    background-color: #3f3c3cd2;
+    border: var(--bs-border-width) solid rgba(239, 243, 238, 0.91);
+    border-radius: var(--bs-navbar-toggler-border-radius);
+    transition: var(--bs-navbar-toggler-transition);
+}
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
 /* Navbar */
 .navbar {
-    background-color: #000;
+    background-color: #afaaaa;
     position: fixed;
     width: 100%;
     top: 0;

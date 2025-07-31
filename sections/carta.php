@@ -1,33 +1,49 @@
 <!-- Carta Section -->
+<?php
+// obtengo la carta
+$sql="select * from cartas where seccion='Carta' AND activo=1 Limit 1";
+ 
+$carta=$trabajo->getRegistrosSQL($sql);
+ 
+
+$imagenesRaw = explode(',', $carta[0]['imagen']);
+
+$imagenesCarta = array_filter(array_unique(array_map('trim', $imagenesRaw)));
+$cartaPDF=$carta[0]['archivo'];
+
+
+
+
+
+
+?>
+
+
+
+
 <div id="carta" class="espacios">
     <div class="section-container">
         <h2 class="section-title playfair">NUESTRA CARTA</h2>
         <p class="section-description">
-            Descubre nuestra selección de platos y bebidas. Usa las flechas para navegar.
+            Descubre nuestra selección de platos y bebidas. Usa las flechas para navegar.<?php echo count($imagenesCarta); ?>
         </p>
         <div class="carta-container">
             <div class="carta-pdf">
                 <button class="nav-arrow prev-arrow" aria-label="Página anterior">❮</button>
                 <div id="flipbook">
                     <div class="pages">
+                        <?php foreach ($imagenesCarta as $imagen) { ?>
                         <div class="page">
-                            <img src="img/carta_masneo_pages-to-jpg-0001.jpg" alt="Página 1">
+                            <img src="img/<?php echo $imagen; ?>" alt="carta" >
                         </div>
-                        <div class="page">
-                            <img src="img/carta_masneo_pages-to-jpg-0002.jpg" alt="Página 2">
-                        </div>
-                        <div class="page">
-                            <img src="img/carta_masneo_pages-to-jpg-0003.jpg" alt="Página 3">
-                        </div>
-                        <div class="page">
-                            <img src="img/carta_masneo_pages-to-jpg-0004.jpg" alt="Página 4">
-                        </div>
+                        <?php } ?>
+                      
                     </div>
                 </div>
                 <button class="nav-arrow next-arrow" aria-label="Página siguiente">❯</button>
             </div>
             <div class="carta-buttons">
-                <a href="img/carta_masneo.pdf" class="button button-primary" target="_blank">DESCARGAR CARTA</a>
+                <a href="img/<?php echo $cartaPDF; ?>" class="button button-primary" target="_blank">DESCARGAR CARTA</a>
             </div>
         </div>
     </div>
@@ -37,7 +53,7 @@
 <script>
     $(document).ready(function () {
         var currentPage = 1;
-        var totalPages = 4;
+        var totalPages =<?php echo count($imagenesCarta);?>;
         var isAnimating = false;
         var $pages = $('#flipbook .pages');
         var $flipbook = $('#flipbook');

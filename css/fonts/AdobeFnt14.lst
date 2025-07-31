@@ -1,0 +1,265 @@
+%!Adobe-FontList 1.14
+%Locale:0xc0a
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Amperzand
+FamilyName:Amperzand
+StyleName:Regular
+FullName:Amperzand
+MenuName:Amperzand
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:F:\cartas\bugatti\Carpeta carta_bugatti\Document fonts\Amperzand.ttf
+DataFormat:sfntData
+FileLength:168764
+FileModTime:1284672544
+WeightClass:400
+WidthClass:5
+AngleClass:0
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:CenturyGothic
+FamilyName:Century Gothic
+StyleName:Regular
+FullName:Century Gothic
+MenuName:Century Gothic
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:F:\cartas\bugatti\Carpeta carta_bugatti\Document fonts\GOTHIC.TTF
+DataFormat:sfntData
+FileLength:137568
+FileModTime:910885168
+WeightClass:400
+WidthClass:5
+AngleClass:0
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:CenturyGothic-Bold
+FamilyName:Century Gothic
+StyleName:Bold
+FullName:Century Gothic Bold
+MenuName:Century Gothic
+StyleBits:2
+WritingScript:Roman
+OutlineFileName:F:\cartas\bugatti\Carpeta carta_bugatti\Document fonts\GOTHICB.TTF
+DataFormat:sfntData
+FileLength:129676
+FileModTime:910885168
+WeightClass:700
+WidthClass:5
+AngleClass:0
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:CenturyGothic-Italic
+FamilyName:Century Gothic
+StyleName:Italic
+FullName:Century Gothic Italic
+MenuName:Century Gothic
+StyleBits:1
+WritingScript:Roman
+OutlineFileName:F:\cartas\bugatti\Carpeta carta_bugatti\Document fonts\GOTHICI.TTF
+DataFormat:sfntData
+FileLength:148520
+FileModTime:910885168
+WeightClass:400
+WidthClass:5
+AngleClass:1
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:LithosPro-Regular
+FamilyName:Lithos Pro
+StyleName:Regular
+FullName:Lithos Pro
+MenuName:Lithos Pro Regular
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:F:\cartas\bugatti\Carpeta carta_bugatti\Document fonts\LithosPro-Regular.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:79980
+FileModTime:1327590768
+WeightClass:400
+WidthClass:5
+AngleClass:0
+DesignSize:240
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:MinionPro-Bold
+FamilyName:Minion Pro
+StyleName:Bold
+FullName:Minion Pro Bold
+MenuName:Minion Pro
+StyleBits:2
+WritingScript:Roman
+OutlineFileName:F:\cartas\bugatti\Carpeta carta_bugatti\Document fonts\MinionPro-Bold.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:217028
+FileModTime:1329303226
+WeightClass:700
+WidthClass:5
+AngleClass:0
+DesignSize:110
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:MinionPro-BoldCn
+FamilyName:Minion Pro
+StyleName:Bold Cond
+FullName:Minion Pro Bold Cond
+MenuName:Minion Pro Cond
+StyleBits:2
+WritingScript:Roman
+OutlineFileName:F:\cartas\bugatti\Carpeta carta_bugatti\Document fonts\MinionPro-BoldCn.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:219244
+FileModTime:1327590768
+WeightClass:700
+WidthClass:3
+AngleClass:0
+DesignSize:110
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:MinionPro-BoldIt
+FamilyName:Minion Pro
+StyleName:Bold Italic
+FullName:Minion Pro Bold Italic
+MenuName:Minion Pro
+StyleBits:3
+WritingScript:Roman
+OutlineFileName:F:\cartas\bugatti\Carpeta carta_bugatti\Document fonts\MinionPro-BoldIt.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:257148
+FileModTime:1329303226
+WeightClass:700
+WidthClass:5
+AngleClass:1
+DesignSize:110
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:MinionPro-Regular
+FamilyName:Minion Pro
+StyleName:Regular
+FullName:Minion Pro
+MenuName:Minion Pro
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:F:\cartas\bugatti\Carpeta carta_bugatti\Document fonts\MinionPro-Regular.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:217280
+FileModTime:1329303226
+WeightClass:400
+WidthClass:5
+AngleClass:0
+DesignSize:110
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Montserrat-Bold
+FamilyName:Montserrat
+StyleName:Bold
+FullName:Montserrat-Bold
+MenuName:Montserrat
+StyleBits:2
+WritingScript:Roman
+OutlineFileName:F:\cartas\bugatti\Carpeta carta_bugatti\Document fonts\Montserrat-Bold.ttf
+DataFormat:sfntData
+FileLength:29560
+FileModTime:1361956510
+WeightClass:700
+WidthClass:5
+AngleClass:0
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Montserrat-Regular
+FamilyName:Montserrat
+StyleName:Regular
+FullName:Montserrat-Regular
+MenuName:Montserrat
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:F:\cartas\bugatti\Carpeta carta_bugatti\Document fonts\Montserrat-Regular.ttf
+DataFormat:sfntData
+FileLength:29016
+FileModTime:1361956510
+WeightClass:400
+WidthClass:5
+AngleClass:0
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:RageItalic
+FamilyName:Rage Italic
+StyleName:Regular
+FullName:Rage Italic
+MenuName:Rage Italic
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:F:\cartas\bugatti\Carpeta carta_bugatti\Document fonts\RAGE.TTF
+DataFormat:sfntData
+FileLength:132600
+FileModTime:930209638
+WeightClass:400
+WidthClass:5
+AngleClass:0
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:SilentReaction
+FamilyName:Silent Reaction
+StyleName:Regular
+FullName:Silent Reaction
+MenuName:Silent Reaction
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:F:\cartas\bugatti\Carpeta carta_bugatti\Document fonts\Silent Reaction.ttf
+DataFormat:sfntData
+FileLength:23680
+FileModTime:1368550000
+WeightClass:400
+WidthClass:5
+AngleClass:0
+%EndFont
+
