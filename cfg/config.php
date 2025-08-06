@@ -24,6 +24,6 @@ $codPoblacion_empresa="36002";
 
 define('SMTP_HOST', 'manseo-es.correoseguro.dinaserver.com');
 define('SMTP_USER', 'reservas@manseo.es');
-define('SMTP_PASS', 'Manseo_635241');
+define('SMTP_PASS', 'SPastoriza44.');
 define('SMTP_PORT', 587);
 ?>

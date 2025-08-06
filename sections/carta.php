@@ -25,7 +25,7 @@ $cartaPDF=$carta[0]['archivo'];
     <div class="section-container">
         <h2 class="section-title playfair">NUESTRA CARTA</h2>
         <p class="section-description">
-            Descubre nuestra selección de platos y bebidas. Usa las flechas para navegar.<?php echo count($imagenesCarta); ?>
+            Descubre nuestra selección de platos y bebidas. 
         </p>
         <div class="carta-container">
             <div class="carta-pdf">
